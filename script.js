@@ -15,8 +15,7 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString().slice(0, -1)
     }
 
-
-        appendNumber(number) {
+    appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
@@ -48,6 +47,9 @@ class Calculator {
                 break
             case '÷':
                 computation = prev / current
+                break
+            case '%':
+                computation = prev % current
                 break
             default:
                 return
